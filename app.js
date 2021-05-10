@@ -5,11 +5,12 @@ const inquirer = require('inquirer')
 const path = require('path')
 const fs = require('fs')
 
+let team =[]
+
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, 'team.html')
 
 const render = require("./lib/htmlRenderer");
-const { create } = require('domain')
 
 // Start the application by running node.js
 function start() {
@@ -37,7 +38,7 @@ function start() {
         },
     ]).then(response => {
         const newManager = new Manager(response.managerName, response.managerId, response.managerEmail, response.officeNumber);
-        buildTeam.push(newManager);
+        team.push(newManager);
         newMember();
     });
 }
