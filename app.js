@@ -49,7 +49,7 @@ function newMember() {
         {
             type: 'list',
             message: 'Would you like to add a new team member?',
-            choices: ['Engineer', 'Intern', 'Quit'],
+            choices: ['Engineer', 'Intern', 'Finish'],
             name: 'newEmployee'
         }
     ]).then(response => {
@@ -60,7 +60,7 @@ function newMember() {
             case 'Intern':
                 newIntern();
                 break;
-            case 'Quit':
+            case 'Finish':
                 create();
                 break;
         }
@@ -127,6 +127,7 @@ function newIntern() {
     })
 };
 
+// creates the team to be rendered to the team.html page
 function create() {
     fs.writeFile(outputPath, render(team), function (err) {
         if (err) throw err;
