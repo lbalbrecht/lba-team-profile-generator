@@ -4,6 +4,8 @@
 
 This application will allow the user to generate a site for their development team. The site will include each member's contact information as well as employee IDs and other pertinent professional information based on their role. Presently, the application allows the user to input information for managers, engineers, and interns; although, there is the opportunity to expand the application for teams with a broader variety of roles. The application uses the "inquirer" npm package to allow the user to build their team. Additionally, the app uses the "jest" npm package to test the application.
 
+[App demo](https://drive.google.com/file/d/1w6jAAOGf-HjXwfqpKKzUxL05T-8gRbpQ/view?usp=sharing)
+
 ## Usage
 
 The user begins by opening the integrated command terminal in VS Code. First, the user must initiate npm to install the required packages using the following command
